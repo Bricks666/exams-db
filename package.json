@@ -1,0 +1,28 @@
+{
+  "name": "task-manager-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "nodemon ./dist/index.js",
+    "watch": "rollup -c --watch",
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "nodemon": "^2.0.20",
+    "rollup": "^3.5.0",
+    "rollup-plugin-dotenv": "^0.4.1",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "mariadb": "^3.0.2"
+  }
+}
