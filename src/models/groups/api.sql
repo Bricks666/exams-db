@@ -1,0 +1,21 @@
+CREATE PROCEDURE `INSERT_GROUP`(IN `ROOM_ID` INT UNSIGNED
+, IN `CREATOR_ID` INT UNSIGNED, IN `NAME` VARCHAR(
+32), IN `MAIN_COLOR` VARCHAR(7), IN `SECONDARY_COLOR` 
+VARCHAR(7)) BEGIN 
+	SELECT `NAME`, `MAIN_COLOR`;
+	INSERT INTO
+	    `GROUPS`(
+	        `ROOM_ID`,
+	        `CREATOR_ID`,
+	        `NAME`,
+	        `MAIN_COLOR`,
+	        `SECONDARY_COLOR`
+	    )
+	VALUES (
+	        `ROOM_ID`,
+	        `CREATOR_ID`,
+	        `NAME`,
+	        `MAIN_COLOR`,
+	        `SECONDARY_COLOR`
+	    );
+END; 

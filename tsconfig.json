@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "baseUrl": "./src/",
+    "paths": {
+      "@/*": ["*"]
+    },
     /* Language and Environment */
     "target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "allowJs": true, //Компилировать ли файлы с JS тоже
@@ -14,12 +16,15 @@
     "noEmit": false,
 
     "module": "ESNext",
-    "esModuleInterop": true,
+    /* Interop Constraints */
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
+    /* Completeness */
     "skipLibCheck": false /* Skip type checking all .d.ts files. */
   },
-  "include": ["src/**/*.*"],
-  "exclude": ["node_modules", "sql"]
+  "include": ["src", "global.d.ts"],
+  "exclude": ["node_modules", "dist", "sql"]
 }

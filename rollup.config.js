@@ -1,6 +1,7 @@
 import typescript from "rollup-plugin-typescript2";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
+import url from "@rollup/plugin-url";
 
 /** @type {import("rollup").RollupOptions} */
 export default {
@@ -19,6 +20,11 @@ export default {
     commonjs(),
     typescript({
       tsconfig: "tsconfig.json",
+    }),
+    url({
+      include: ["**/*.sql"],
+      limit: 0,
+      fileName: "[dirname][name][extname]",
     }),
   ],
 };
