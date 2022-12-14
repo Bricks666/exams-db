@@ -37,7 +37,7 @@ export const generate = async (
       ),
     };
     const request = query(
-      `CALL INSERT_GROUP(${params.roomId}, ${params.userId}, ${params.name}, ${params.mainColor}, ${params.secondaryColor});`
+      `CALL ADD_GROUP(${params.roomId}, ${params.userId}, ${params.name}, ${params.mainColor}, ${params.secondaryColor});`
     );
 
     requests.push(request);

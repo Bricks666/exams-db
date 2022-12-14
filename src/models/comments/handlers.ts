@@ -40,7 +40,7 @@ export const generate = async (
       content: JSON.stringify(faker.lorem.text().slice(0, 128)),
     };
     const request = query(
-      `CALL INSERT_COMMENT(${params.taskId},  ${params.userId}, ${params.content});`
+      `CALL ADD_COMMENT(${params.taskId},  ${params.userId}, ${params.content});`
     );
 
     requests.push(request);

@@ -4,6 +4,7 @@ import { readSQLFile } from "@/helpers";
 import table from "./table.sql";
 import procedures from "./procedures.sql";
 import triggers from "./triggers.sql";
+import api from "./api.sql";
 
 export const createTable = async () => {
   const tableSQL = await readSQLFile(table);
@@ -18,4 +19,10 @@ export const createProcedures = async () => {
 export const createTriggers = async () => {
   const triggersSQL = await readSQLFile(triggers);
   await splitAndExecuteQuery(triggersSQL, "END; ");
+};
+
+
+export const createApi = async () => {
+  const apiSQL = await readSQLFile(api);
+  await splitAndExecuteQuery(apiSQL, "END; ");
 };

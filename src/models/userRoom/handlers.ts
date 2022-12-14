@@ -28,7 +28,7 @@ export const generate = async (
       roomId: faker.helpers.arrayElement(roomIds),
     };
     const request = query(
-      `CALL INSERT_USER_ROOM(${params.userId}, ${params.roomId});`
+      `CALL ADD_USER_ROOM(${params.userId}, ${params.roomId});`
     );
 
     requests.push(request);

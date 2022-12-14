@@ -30,7 +30,7 @@ export const generate = async (count: number): Promise<Array<number>> => {
       description: JSON.stringify(faker.lorem.paragraph(1).slice(0, 255)),
     };
     const request = query(
-      `CALL INSERT_ROOM(${params.name}, ${params.description});`
+      `CALL ADD_ROOM(${params.name}, ${params.description});`
     );
 
     requests.push(request);

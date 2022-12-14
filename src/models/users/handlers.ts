@@ -30,7 +30,7 @@ export const generate = async (count: number): Promise<Array<number>> => {
       ),
     };
     const request = query(
-      `CALL INSERT_USER(${params.login}, ${params.password}, ${params.photo});`
+      `CALL ADD_USER(${params.login}, ${params.password}, ${params.photo});`
     );
 
     requests.push(request);

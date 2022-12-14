@@ -50,7 +50,7 @@ export const generate = async (
       ),
     };
     const request = query(
-      `CALL INSERT_TASK(${params.roomId}, ${params.groupId}, ${params.userId}, ${params.content}, ${params.status});`
+      `CALL ADD_TASK(${params.roomId}, ${params.groupId}, ${params.userId}, ${params.content}, ${params.status});`
     );
 
     requests.push(request);
